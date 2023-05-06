@@ -6,6 +6,9 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: fixed; /* rende la nav bar fissa in alto */
+    top: 0; /* posiziona la nav bar all'inizio della pagina */
 }
 
 nav ul>li {
@@ -47,3 +50,21 @@ nav li a {
 nav li a:hover {
     background-color: #a7a7a7;
 }
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  header,
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 80vh; /* imposta l'altezza dell'header e del main al 80% dell'altezza della viewport */
+  }
