@@ -7,11 +7,13 @@ const app = express();
 const port = configurazione.porta_server;
 
 // Serve static files from the public directory
-app.use(express.static(path.join(__dirname, '/../public')));
+//app.use(express.static(path.join(__dirname, '/../public')));
 
 // Homepage
 app.get('/', function(req, res) {
-  res.send(genera_contenuti.pagina_iniziale(req, res));
+    console.log("Sono qui");
+    let risposta = genera_contenuti.pagina_iniziale(req, res)
+    res.send(risposta);
 });
 
 // Avvia il server
