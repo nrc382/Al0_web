@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const configurazione = require("./statics/configurazione.json");
+const genera_contenuti = require("./codice_js/contenuti");
 
 const app = express();
 const port = configurazione.porta_server;
@@ -10,7 +11,7 @@ app.use(express.static(path.join(__dirname, '/../public')));
 
 // Homepage
 app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, '../public/index.html'));
+  res.send(genera_contenuti.pagina_iniziale(req, res));
 });
 
 // Avvia il server
